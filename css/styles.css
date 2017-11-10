@@ -824,7 +824,7 @@ font-family: 'Roboto', sans-serif;
     }
 }
 
-@media only screen and (max-width: 580px)
+@media only screen and (max-width: 750px){
 div#e-gp:before {
     position: absolute;
     content: '';
@@ -836,6 +836,9 @@ div#e-gp:before {
 	div#e-gp:after {
     left: 25px;
 	}
+	span.vtimeline-date {
+    display: none;
+}
 }
 @media only screen and (max-width: 480px) {
     #lead-content h1 {
