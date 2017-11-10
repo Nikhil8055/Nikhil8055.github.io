@@ -19,6 +19,9 @@ body.active {
     display: inline-block;
     margin: 0
 }
+.container {
+    max-width: 100% !important;
+}
 .no-js #experience-timeline>div h4 {
     font-size: 1.2em;
     font-weight: 300;
@@ -111,23 +114,21 @@ header.active {
     position: fixed;
     right: 15px;
     top: 10px;
-    color: #3498db;
     font-size: 1.5em;
     z-index: 10;
     padding: 0 7px;
     border-radius: 4px;
-    background: #fff
 }
 #mobile-menu-close {
     display: none;
     text-align: right;
-    width: 100%;
-    background: #fff;
-    font-size: 1.5em;
-    padding-right: 15px;
-    padding-top: 10px;
+    font-size: 30px;
+    padding-right: 21px;
+    padding-top: 1px;
     cursor: pointer;
-    color: #3498db
+    color: #fff;
+    position: absolute;
+    right: 0px;
 }
 #mobile-menu-close span {
     font-size: 0.5em;
@@ -719,10 +720,20 @@ font-family: 'Roboto', sans-serif;
         margin-left: 70px
     }
 }
+
+@media only screen and (max-width: 1100px) {
+#lead-down {
+    bottom: 70px;
+}
+}
 @media only screen and (max-width: 992px) {
     #lead {
         padding: 100px 15px
     }
+	header li {
+    display: inline-block;
+    padding: 0 19px;
+}
     #lead-content h1 {
         font-size: 3em
     }
@@ -746,16 +757,23 @@ font-family: 'Roboto', sans-serif;
         bottom: 0;
         height: 100%
     }
+	.project-info ul {
+    text-align: center;
+    list-style: none;
+	}
     #mobile-menu-open,
     #mobile-menu-close {
         display: block
     }
+	.project-info h3 {
+		    font-size: 35px;
+    border-bottom: 1px dashed;
+    display: inline-block;
+}
     #menu {
-        height: 100%;
-        overflow-y: auto;
-        box-shadow: none;
-        border-radius: 0;
-        width: 100%
+        background: rgba(0,0,0,0.5);
+		overflow-y: scroll;
+    height: 100vh;
     }
     #menu li {
         display: block;
@@ -778,21 +796,46 @@ font-family: 'Roboto', sans-serif;
         float: none
     }
     .project-image {
-        display: none
-    }
+    float: none;
+    width: 100%;
+    min-height: 388px;
+    padding: 45px;
+}
     .project-info {
         position: relative;
         margin: 0;
         top: auto;
         -webkit-transform: none;
-        transform: none
+        transform: none;
+		width: 100%;
+    float: none;
+    border-radius: 4px;
+    min-height: 350px;
+
     }
+	i.fa.fa-bars {
+    color: #fff;
+}
     footer {
         text-align: center
     }
     .social {
         text-align: center
     }
+}
+
+@media only screen and (max-width: 580px)
+div#e-gp:before {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 25px;
+	
+	}
+	div#e-gp:after {
+    left: 25px;
+	}
 }
 @media only screen and (max-width: 480px) {
     #lead-content h1 {
